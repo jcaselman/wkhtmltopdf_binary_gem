@@ -14,6 +14,8 @@ when /linux/
   (RbConfig::CONFIG['host_cpu'] == 'x86_64') ? 'linux_amd64' : 'linux_x86'
 when /darwin/
   'darwin_x86'
+when /mswin|mingw32/
+  'win32_x64.exe'
 else
   raise "Invalid platform. Must be running on linux or intel-based Mac OS."
 end
